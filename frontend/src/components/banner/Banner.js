@@ -19,22 +19,19 @@ export default function Banner() {
             expedita eos a blanditiis sint modi est error veniam 
             facere eum at doloribus amet, nobis ut.
 				</BannerDesc>
-                <BannerButton
-					className="basma-button"
-				
-				>
+                <BannerButton	>
 					Get Started
 				</BannerButton>
                 <br/>
             </BannerTextContainer>
-            <ImgBannerContainer>
+            <ImgBannerContainer >
             <ImgBanner src={thumb} alt="banner"/>
             </ImgBannerContainer>
             </>
             :
             <>
           {/* // flip   */}
-            <ImgBannerContainer>
+            <ImgBannerContainer >
             <ImgBanner src={thumb} alt="banner"/>
             </ImgBannerContainer>
             <BannerTextContainer>
@@ -45,10 +42,7 @@ export default function Banner() {
             expedita eos a blanditiis sint modi est error veniam 
             facere eum at doloribus amet, nobis ut.
 				</BannerDesc>
-                <BannerButton
-					className="basma-button"
-				
-				>
+                <BannerButton >
 					Get Started
 				</BannerButton>
                 <br/>

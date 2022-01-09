@@ -1,0 +1,52 @@
+.price-container {
+  background-color: #f6f9fe;
+  width: 90%;
+  margin: auto;
+  margin-bottom: 5rem;
+  padding: 1rem;
+  margin-bottom: 0;
+}
+
+.cardContainer {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0.5rem;
+
+  width: 98%;
+}
+
+.price-card-container {
+  margin: auto;
+  margin-top: 10%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  /* column-gap: 5%; */
+  margin-bottom: 5%;
+  width: 55%;
+
+  position: relative;
+}
+
+.price-img {
+  max-height: inherit;
+}
+.pice-contact {
+  text-align: center;
+  margin-top: 1.5rem;
+  font-weight: bold;
+}
+.price-link {
+  color: black;
+}
+
+@media only screen and (max-width: 768px) {
+  .price-card-container {
+    width: 100%;
+    gap: 4rem;
+  }
+  .cardContainer {
+    width: 100%;
+  }
+}

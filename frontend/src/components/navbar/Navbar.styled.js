@@ -66,6 +66,12 @@ export const Menu = styled.div`
     max-height: ${({ isOpen }) => (isOpen ? "21rem" : "0")};
     transition: max-height 0.3s ease-in;
     width: 100%;
+position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: 1000;
+  background:rgba(89, 18, 237,0.98);
+ 
   }
 `;
 
@@ -73,12 +79,15 @@ export const NavDropDown = styled.div`
   display: none;
   flex-direction: column;
   cursor: pointer;
+  z-index: 10000;
+  
   span {
     height: 2px;
     width: 25px;
     background: white;
     margin-bottom: 4px;
     border-radius: 5px;
+   
    
   }
   @media (max-width: 768px) {

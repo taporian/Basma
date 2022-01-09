@@ -1,0 +1,39 @@
+.subscribe-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.subscribe-background {
+  background-image: url("../../assets/images/newsletter-background.png");
+  background-repeat: no-repeat;
+  height: 10rem;
+
+  width: 80%;
+  background-position: -15rem -20rem;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  padding: 0rem 0 10rem 0;
+  margin: auto;
+  background-size: 100rem 60rem;
+  color: black;
+  text-align: center;
+}
+
+.subscribe-form {
+  max-width: 50%;
+  margin: auto;
+  flex: 70%;
+  margin-bottom: 3%;
+}
+
+@media only screen and (max-width: 768px) {
+  .subscribe-form {
+    max-width: 90%;
+  }
+  .subscribe-background {
+    width: 90%;
+    height: 20rem;
+    background-position: center;
+  }
+}

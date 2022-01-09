@@ -1,0 +1,89 @@
+.toolContainer {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0.2rem;
+  width: 85%;
+}
+
+.toolicon {
+  font-size: 1.5rem;
+  flex: 9%;
+  color: #7d4ee0;
+}
+.tooldescription {
+  flex: 91%;
+}
+.icon-tools {
+  position: relative;
+  margin: 1rem;
+  display: flex;
+  gap: 2rem;
+}
+.shareicon span {
+  margin-left: -2rem;
+
+  border: 1px solid rgb(236, 233, 233);
+  border-radius: 5px;
+  padding: 0.5rem 0.8rem 0.5rem 0.8rem;
+  background-color: white;
+  box-shadow: -1px 2px 0px -1px rgba(0, 0, 0, 0.05);
+  -webkit-box-shadow: -1px 2px 0px -1px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: -1px 2px 0px -1px rgba(0, 0, 0, 0.05);
+  color: #7d4ee0;
+  font-size: larger;
+}
+.icon-tools span {
+  padding: 0.5rem 0.8rem 0.5rem 0.8rem;
+  background-color: white;
+  box-shadow: 19px -6px 45px -12px rgba(56, 53, 53, 0.4);
+  -webkit-box-shadow: 19px -6px 45px -12px rgba(56, 53, 53, 0.4);
+  -moz-box-shadow: 19px -6px 45px -12px rgba(56, 53, 53, 0.4);
+  color: #7d4ee0;
+  font-size: larger;
+}
+
+.shareContainer {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0.5rem;
+  width: 98%;
+}
+
+.shareicon {
+  font-size: 1.5rem;
+  flex: 9%;
+  color: #7d4ee0;
+}
+.sharedescription {
+  flex: 91%;
+}
+
+@media only screen and (max-width: 768px) {
+  .toolContainer {
+    width: 100%;
+    margin-top: 0.2rem;
+    margin-left: -2rem;
+  }
+  .toolicon {
+    flex: 10%;
+  }
+
+  .tooldescription {
+    flex: 90%;
+  }
+  .shareicon {
+    flex: 5%;
+
+    margin-left: -5rem;
+  }
+  .sharedescription {
+    flex: 95%;
+    width: 100%;
+    margin-left: -2rem;
+  }
+
+  .shareContainer {
+    width: 100%;
+    margin-left: 2rem;
+  }
+}

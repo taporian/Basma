@@ -12,7 +12,7 @@ export default function CodeChallenge() {
             Code Challenge
             <Line/>
             </ChallengeTitle>
-            <Paragraph>          
+            <Paragraph >          
             Lorem ipsum dolor sit amet, 
             consectetur adipisicing elit. 
             Laborum obcaecati dignissimos quae quo ad iste ipsum 
@@ -25,7 +25,7 @@ export default function CodeChallenge() {
           <CodeContainer>
         {iconData.map((data)=>(
                   <>
-                       <DataContainer>
+                       <DataContainer flex={'30%'}>
                            <DataIcon>
                 {data.icon}
                 </DataIcon>

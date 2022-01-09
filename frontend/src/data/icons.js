@@ -1,10 +1,9 @@
-import { MdOutlineTouchApp } from "react-icons/md";
+
 import pointer from '../assets/svg/pointer-top.svg';
 import cogs from '../assets/svg/cogs.svg';
 import { IoFingerPrintOutline } from "react-icons/io5";
 import { RiNotificationBadgeLine } from "react-icons/ri";
 import { HiOutlineLocationMarker } from "react-icons/hi";
-import { IoSettingsOutline } from "react-icons/io5";
 import { BsGlobe } from "react-icons/bs";
 
 

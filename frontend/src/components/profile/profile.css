@@ -1,0 +1,25 @@
+.profile-img {
+  max-height: inherit;
+}
+.profile-container {
+  background: linear-gradient(
+    90deg,
+    rgba(83, 42, 222, 1) 6%,
+    rgba(110, 46, 227, 1) 39%
+  );
+  width: 90%;
+  margin: auto;
+  margin-bottom: 5rem;
+  padding: 1rem;
+}
+
+.profile-arrow {
+  margin-top: 5rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .profile-arrow {
+    transform: rotate(90deg);
+    margin-top: 0rem;
+  }
+}

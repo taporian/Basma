@@ -12,9 +12,9 @@ const [isOpen, setIsOpen] = useState(false);
        <Nav>
       
       <NavDropDown onClick={() => setIsOpen(!isOpen)}>
-        <span />
-        <span />
-        <span />
+        <span  className='nav-span' />
+        <span  />
+        <span  />
         
       </NavDropDown>
       <Menu isOpen={isOpen}>

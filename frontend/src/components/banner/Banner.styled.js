@@ -52,13 +52,22 @@ export const BannerButton = styled.button`
 
  width: fit-content;
 	padding: 0.8em 1em;
+   
+   
     margin-left:9rem;
     border-radius:0.5rem;
     border:none;
     background: linear-gradient(90deg, rgba(83,42,222,1) 30%, rgba(110,46,227,1) 70%);
     color:white;
+    position:${(props)=>props.position}; 
+    margin:${(props)=>props.margin}; 
+    top:${(props)=>props.top}; 
+ 
+
     @media (max-width: 768px) {
     margin:auto;
+    margin:${(props)=>props.margin}; 
+   
 
   }
 `;
@@ -66,11 +75,11 @@ export const BannerButton = styled.button`
 
 export const ImgBannerContainer = styled.div`
 
- max-height: 70vh;
+    max-height: 70vh;
 	flex: 50%;
 	display: flex;
 	justify-content: center;
- flex:50%;
+
 `;
 
 export const ImgBanner = styled.img`
