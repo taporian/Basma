@@ -62,7 +62,14 @@ export const BannerButton = styled.button`
     position:${(props)=>props.position}; 
     margin:${(props)=>props.margin}; 
     top:${(props)=>props.top}; 
+    text-align:${(props)=>props.textAlign}; 
+    left:${(props)=>props.left}; 
+    right:${(props)=>props.right}; 
+   
+  
+    
  
+   
 
     @media (max-width: 768px) {
     margin:auto;

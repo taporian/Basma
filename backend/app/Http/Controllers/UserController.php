@@ -5,8 +5,11 @@ namespace App\Http\Controllers;
 use App\Http\Requests\UserUpdateValidator;
 use App\Http\Requests\UserValidator;
 use App\Models\User;
+use Illuminate\Support\Facades\Http;
 use Illuminate\Http\Request;
 use function PHPUnit\Framework\isEmpty;
+
+
 
 class UserController extends Controller
 {
@@ -14,9 +17,25 @@ class UserController extends Controller
     {
 
         $inputs = $request->validated();
-        $user = new User();
-        $user->fill($inputs);
-        $user->save();
+
+        $data = Http::asForm()->post('https://www.google.com/recaptcha/api/siteverify', [
+            'secret' => env("GOOGLE_RECAPTCHA_SECRET"),
+            'response' => $request->input('recaptcha_token'),
+        ])->json();
+        if ($data['success']) {
+
+            $user = new User();
+            $user->fill($inputs);
+            $user->save();
+        }
+        else{
+            return response()->json([
+             'errors'=>[
+                 'message' => 'Recaptcha Error',
+             ]
+
+            ],400);
+        }
 
         $token = auth('user')->login($user);
 

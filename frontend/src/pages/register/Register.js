@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './register.css'
 import { useDispatch, useSelector } from 'react-redux';
 import { yupResolver } from '@hookform/resolvers/yup';
@@ -6,7 +6,13 @@ import * as yup from 'yup';
 import {useForm} from 'react-hook-form';
 import { signUpUser } from '../../redux/action-creators';
 import { ErrorPForm } from '../../components/form/Form.styled';
+import  ReCAPTCHA from 'react-google-recaptcha';
+import config from '../../components/config';
+
 export default function Register() {
+	const dispatch = useDispatch();
+	const [data,setData]=useState();
+
 	const { error } = useSelector((state) => state.authenticationReducer);
     const schema = yup.object().shape({
         email: yup.string().email().required(),
@@ -22,16 +28,23 @@ export default function Register() {
       const {
         register,
         handleSubmit,
+		reset,
         formState: { errors },
        
       } = useForm({ resolver: yupResolver(schema) });
   
       const onSubmit = (d) =>{
-     
-         dispatch(signUpUser(d));
+			const result = {
+					...d,
+					recaptcha_token:data,
+			}
+		
+         dispatch(signUpUser(result));
+		 setData('');
+		 reset();
       }
 
-    const dispatch = useDispatch();
+   
     return (
        <>
     
@@ -75,9 +88,18 @@ export default function Register() {
 				</button>	
 							
 			</form  >
-			
-            
+			<center>
+
+		
+			<ReCAPTCHA
+			sitekey={config.RECAPTCHA_SITEKEY}
+			onChange={setData}
+			/>
+			{console.log('errors',error)}
+			<ErrorPForm>{error?.message}</ErrorPForm>
+            	</center>
 		</div>
+		{console.log(data)}
         
 		<div class="screen__background">
 			

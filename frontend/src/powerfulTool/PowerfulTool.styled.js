@@ -10,9 +10,11 @@ height:100%;
 padding:2rem;
 
 
+
 @media (max-width: 768px) {
     width:${(props)=>props.widthMedia};
-    padding-bottom:13rem;
+ 
+    padding-bottom:5rem;
   }
 
 
@@ -23,7 +25,7 @@ padding:2rem;
 export const ImgContainerTool = styled.div`
 	flex: 0 0 50%;
 	display: flex;
-    max-height: 60vh;
+    /* max-height: 60vh; */
 	justify-content: center; 
     margin:${(props)=>props.margin};
     @media (max-width: 768px) {
@@ -43,7 +45,7 @@ max-height: inherit;
 export const ConatinerTool = styled.div`
 	flex: 0 0 50%;
 	display: flex;
-    max-height: 60vh;
+    /* max-height: 60vh; */
 	display:flex;
     flex-wrap:wrap;
     margin:auto;
@@ -62,6 +64,7 @@ export const ConatinerTool = styled.div`
 export const ToolTitle = styled.h1`
 font-size:2.5rem;
 /* transform: translate(50%,50%); */
+text-align:center;
 margin-bottom:2rem;
 inline-size: 30rem;
 overflow-wrap: break-word;
@@ -82,6 +85,7 @@ margin-bottom:1rem;
 inline-size:25rem;
 overflow-wrap: break-word;
 font-weight:bolder;
+margin:auto;
 
 @media (max-width: 768px) {
    margin:auto;
@@ -96,6 +100,7 @@ export const ToolData = styled.div`
 display: flex;
 flex-wrap:wrap;
 	width: 85%;
+  margin:auto;
 	flex-direction: column;
 
 /* transform: translate(50%,50%); */

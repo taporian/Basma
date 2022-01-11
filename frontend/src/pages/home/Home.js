@@ -20,6 +20,7 @@ export default function Home() {
         <Banner/>
         <CodeChallenge/>
         <PowerfulTool/>
+        
         <Share/>
         <Profile/>
         <Price/>

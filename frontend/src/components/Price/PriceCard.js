@@ -29,7 +29,7 @@ export default function PriceCard({basicData,proData}) {
                 </Paragraph>
                
                  </DataContainer>
-                 <BannerButton top="95%" margin='0 0 0 6.5rem' position='absolute'	>
+                 <BannerButton style={{ 'margin-left': 'auto' , 'margin-right': 'auto'}} textAlign='center' top="95%" left='0' right='0' position='absolute'	>
 					Sign Up
 				</BannerButton>
                  
@@ -61,7 +61,7 @@ export default function PriceCard({basicData,proData}) {
                    </Paragraph>
                   
                     </DataContainer>
-                    <BannerButton top="95%" margin='0 0 0 6.5rem' position='absolute'	>
+                    <BannerButton style={{ 'marginLeft': 'auto' , 'marginRight': 'auto'}} textAlign='center' top="95%" left='0' right='0' position='absolute'	>
                        Sign Up
                    </BannerButton>
                     

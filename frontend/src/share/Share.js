@@ -15,7 +15,9 @@ export default function Share() {
             <ShareTitle>
                 Share your photos with friends easily.
             </ShareTitle>
+           
             <ToolData>
+                <br/>
             {shareData.map((data)=>(
                   <>
                   <div className='shareContainer'>

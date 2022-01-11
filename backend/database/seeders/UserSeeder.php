@@ -13,7 +13,8 @@ class UserSeeder extends Seeder{
      *
      * @return void
      */
-    // php artisan db:seed --class=UserSeeder to run
+    // php artisan db:seed --class=UserSeeder
+
     public function run()
     {
         $faker = Faker::create();
