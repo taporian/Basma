@@ -6,7 +6,7 @@ import * as yup from 'yup';
 import {useForm} from 'react-hook-form';
 import { signUpUser } from '../../redux/action-creators';
 import { ErrorPForm } from '../../components/form/Form.styled';
-import  ReCAPTCHA from 'react-google-recaptcha';
+import  ReCAPTCHA from "react-google-recaptcha";
 import config from '../../components/config';
 
 export default function Register() {
