@@ -103,3 +103,10 @@
     margin: auto;
   }
 }
+
+@media only screen and (max-width: 370px) {
+  .send-message-icon {
+    left: 15%;
+    top: 10%;
+  }
+}
