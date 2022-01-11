@@ -48,42 +48,42 @@ export default function Register() {
     return (
        <>
     
-       <div class="container">
+       <div className="container">
        
-	<div class="screen">
-		<div class="screen__content">
-			<form class="login" onSubmit={handleSubmit(onSubmit)}>
-				<div class="login__field">
-					<i class="login__icon fas fa-user"></i>
+	<div className="screen">
+		<div className="screen__content">
+			<form className="login" onSubmit={handleSubmit(onSubmit)}>
+				<div className="login__field">
+					<i className="login__icon fas fa-user"></i>
 					<input type="text" class="login__input" placeholder="Name"  {...register("name")}/>
 					<ErrorPForm>{errors.name?.message}</ErrorPForm>
         			<ErrorPForm>{error && error.name}</ErrorPForm> 
 				</div>
 			 
-				<div class="login__field">
-					<i class="login__icon fas fa-user"></i>
-					<input type="text" class="login__input" placeholder="Last Name"  {...register("last_name")}/>
+				<div className="login__field">
+					<i className="login__icon fas fa-user"></i>
+					<input type="text" className="login__input" placeholder="Last Name"  {...register("last_name")}/>
 					<ErrorPForm>{errors.last_name?.message}</ErrorPForm>
         			<ErrorPForm>{error && error.last_name}</ErrorPForm>  
 				</div>
 			
-				<div class="login__field">
-					<i class="login__icon fas fa-user"></i>
-					<input type="text" class="login__input" placeholder="Email"  {...register("email")}/>
+				<div className="login__field">
+					<i className="login__icon fas fa-user"></i>
+					<input type="text" className="login__input" placeholder="Email"  {...register("email")}/>
 					<ErrorPForm>{errors.email?.message}</ErrorPForm>
         			<ErrorPForm>{error && error.email}</ErrorPForm>  
 				</div>
 				
-				<div class="login__field">
-					<i class="login__icon fas fa-lock"></i>
-					<input type="password" class="login__input" placeholder="Password"  {...register("password")}/>
+				<div className="login__field">
+					<i className="login__icon fas fa-lock"></i>
+					<input type="password" className="login__input" placeholder="Password"  {...register("password")}/>
 					<ErrorPForm>{errors.password?.message}</ErrorPForm>
         			<ErrorPForm>{error && error.password}</ErrorPForm>  
 				</div>
 		
 			
-				<button class="button login__submit">
-					<span class="button__text">Register</span>
+				<button className="button login__submit">
+					<span className="button__text">Register</span>
 					<i class="button__icon fas fa-chevron-right"></i>
 				</button>	
 							
@@ -99,14 +99,14 @@ export default function Register() {
 			<ErrorPForm>{error?.message}</ErrorPForm>
             	</center>
 		</div>
-		{console.log(data)}
+		
         
-		<div class="screen__background">
+		<div className="screen__background">
 			
-			<span class="screen__background__shape screen__background__shape4"></span>
-			<span class="screen__background__shape screen__background__shape3"></span>		
-			<span class="screen__background__shape screen__background__shape2"></span>
-			<span class="screen__background__shape screen__background__shape1"></span>
+			<span className="screen__background__shape screen__background__shape4"></span>
+			<span className="screen__background__shape screen__background__shape3"></span>		
+			<span className="screen__background__shape screen__background__shape2"></span>
+			<span className="screen__background__shape screen__background__shape1"></span>
 		</div>
 		<div className='social-icons'>
 		<a className='social-account' href='/'>Back home</a>

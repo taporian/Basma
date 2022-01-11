@@ -1,16 +1,16 @@
 import React,{useState} from 'react'
-import { Nav,NavDropDown,Menu,MenuLink,DropButton } from './Navbar.styled';
+import { Nav,NavDropDown,Menu,MenuLink,DropButton ,Logo} from './Navbar.styled';
 import { DropdownButton,Dropdown } from "react-bootstrap";
-import { useDispatch } from 'react-redux';
 
+import {GoPrimitiveDot} from 'react-icons/go'
 
 
 
 
 export default function Navbar() {
-    const currentUser=localStorage.getItem('USER-NAME');
+  
 const [isOpen, setIsOpen] = useState(false);
-const dispatch = useDispatch();
+
 
 
     return (
@@ -18,7 +18,10 @@ const dispatch = useDispatch();
       
    
        <Nav>
+       <Logo href="/">
+        BASMA<span ><GoPrimitiveDot className='dot'  /> </span>
       
+      </Logo>
       <NavDropDown onClick={() => setIsOpen(!isOpen)}>
         <span  className='nav-span' />
         <span  />
