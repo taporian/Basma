@@ -4,21 +4,36 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import makeStore from "./redux/store";
-import {BrowserRouter as Router} from "react-router-dom";
-import { BrowserRouter } from 'react-router-dom';
+import Register from './pages/register/Register'
+import 'react-toastify/dist/ReactToastify.css';
+import {
+  BrowserRouter,
+  Routes,
+  Route
+} from "react-router-dom";
+// import {BrowserRouter as Router, Route} from "react-router-dom";
+// import { BrowserRouter,Routes} from 'react-router-dom';
 import { Provider } from "react-redux";
+import { ToastContainer } from 'react-toastify';
+
 
 
 const store = makeStore();
 
 const WithProvider = () => (
-  <BrowserRouter>
-  <Router>
   <Provider store={store}>
-    <App />
-  </Provider>
-  </Router>
+ 
+  <BrowserRouter>
+ 
+    <Routes>
+      <Route path="/" element={<App />}/>
+      <Route path="/register" element={<Register/>} />  
+     
+    </Routes>
   </BrowserRouter>
+  <ToastContainer  />
+  </Provider>
+
 
 );
 

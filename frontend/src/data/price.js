@@ -1,12 +1,7 @@
 
 import basic from '../assets/images/bike.png';
 import pro from '../assets/images/motorbike.png';
-import cogs from '../assets/svg/cogs.svg';
-import { IoFingerPrintOutline } from "react-icons/io5";
-import { RiNotificationBadgeLine } from "react-icons/ri";
-import { HiOutlineLocationMarker } from "react-icons/hi";
-import { BsGlobe } from "react-icons/bs";
-import { Line } from '../components/codeChallenge/CodeChallenge.styled';
+
 
 
 export const basicData  = [

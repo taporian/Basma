@@ -1,10 +1,18 @@
 import React,{useState} from 'react'
-import { Nav,NavDropDown,Menu,MenuLink,DropButton,Clip } from './Navbar.styled';
-import { DropdownButton,Dropdown ,} from "react-bootstrap";
+import { Nav,NavDropDown,Menu,MenuLink,DropButton } from './Navbar.styled';
+import { DropdownButton,Dropdown } from "react-bootstrap";
+import { useDispatch } from 'react-redux';
+
+
+
+
 
 export default function Navbar() {
-
+    const currentUser=localStorage.getItem('USER-NAME');
 const [isOpen, setIsOpen] = useState(false);
+const dispatch = useDispatch();
+
+
     return (
       <>
       
@@ -37,9 +45,10 @@ const [isOpen, setIsOpen] = useState(false);
           </DropButton>
         <MenuLink href="/contact">Contact</MenuLink>
       
+        <MenuLink href="/register">Register </MenuLink>
+       
         </Menu>   
 
-     
     </Nav>
 
 

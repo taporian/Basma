@@ -6,6 +6,7 @@ use App\Http\Requests\UserUpdateValidator;
 use App\Http\Requests\UserValidator;
 use App\Models\User;
 use Illuminate\Http\Request;
+use function PHPUnit\Framework\isEmpty;
 
 class UserController extends Controller
 {
@@ -27,11 +28,13 @@ class UserController extends Controller
         $credentials = request(['email', 'password']);
         $id = User::select('id')->where('email', $credentials)->get()->pluck('id');
         $name = User::select('name')->where('email', $credentials)->first();
-        $id=$id[0];
-        if (! $token = auth('user')->attempt($credentials)) {
+
+
+        if (!$token= auth('user')->attempt($credentials)  ) {
             return response()->json(['error' => 'Wrong Username or Password'], 401);
         }
 
+        $id=$id[0];
         return $this->respondWithLoginToken($token,$id,$name);
     }
 

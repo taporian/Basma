@@ -37,11 +37,11 @@ class AdminController extends Controller
     {
         $credentials = request(['email', 'password']);
         $name = Admin::select('name')->where('email', $credentials)->first();
-        $name = $name->name;
+
         if (! $token = auth('admin')->attempt($credentials)) {
             return response()->json(['error' => 'Wrong Username or Password'], 401);
         }
-
+        $name = $name->name;
         return $this->respondWithTokenLogin($token,$name);
 
 

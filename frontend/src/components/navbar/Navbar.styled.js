@@ -63,7 +63,7 @@ export const Menu = styled.div`
     flex-direction: column;
     align-items: center;
     height:100%;
-    max-height: ${({ isOpen }) => (isOpen ? "21rem" : "0")};
+    max-height: ${({ isOpen }) => (isOpen ? "23rem" : "0")};
     transition: max-height 0.3s ease-in;
     width: 100%;
 position: absolute;

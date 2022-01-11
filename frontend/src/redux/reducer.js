@@ -3,6 +3,9 @@
 import{
   
 
+    SIGN_UP_USER_FAILURE,
+    SIGN_UP_USER_REQUEST,
+    SIGN_UP_USER_SUCCESS,
 
 } from './action-types';
 
@@ -17,19 +20,14 @@ const iniState ={
     // currentAdmin: localStorage.getItem("ADMIN-TOKEN")
     //     ? isValidToken(localStorage.getItem("ADMIN-TOKEN"))
     //     : null,
-    currentAdmin:"",
     currentUser:"",
-        access_token: localStorage.getItem("ADMIN-TOKEN")
-        ? localStorage.getItem("ADMIN-TOKEN")
-        : null,
         access_token_user: localStorage.getItem("USER-TOKEN")
         ? localStorage.getItem("USER-TOKEN")
         : null,
     error:"",
     loading: false,
     isAuthenticated: false,
-
-
+    currentName:null,
 
      
 
@@ -42,10 +40,44 @@ const iniState ={
 
 export const authenticationReducer = (state=iniState,action) =>{
     switch(action.type){
-         
+      
+              
+                    case SIGN_UP_USER_REQUEST:
+                  
+                        return{
+                            ...state,
+                            loading: true,
+                            currentUser: "",
+                            isAuthenticated:false,
+                        };
+                  
+                    case SIGN_UP_USER_FAILURE:
+                 
+                       
+                        return {
+                            ...state,
+                            loading: false,
+                            error: action.payload,
+                            currentUser: null,
+                            isAuthenticated: false,
+                        };
+                    case SIGN_UP_USER_SUCCESS:
+                  
+                        
+                        return{
+                            ...state,
+                            loading:false,
+                            access_token_user: action.payload.access_token,
+                            currentUser: action.payload.email,
+                            currentName: action.payload.user_name.name,
+                            isAuthenticated: true,
+                        };
+                  
+                        default:
+                            return{state};       
     }
 };
-//////////////////////////GUEST///////////////////////////////////////////////////////////
+
 
 
 export default authenticationReducer;

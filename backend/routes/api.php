@@ -36,11 +36,12 @@ Route::group(['prefix' => 'admins'], function() {
 
     Route::post('/login', ['App\Http\Controllers\AdminController', 'login']);
     Route::post('/register', ['App\Http\Controllers\AdminController', 'register']);
-    Route::group(['middleware' => ['jwt.admin']], function () {
-        Route::get('/getAllUsers', ['App\Http\Controllers\AdminController', 'getAllUsers']);
 
+    Route::group(['middleware' => ['jwt.admin']], function () {
+
+        Route::post('/getAllUsers', ['App\Http\Controllers\AdminController', 'getAllUsers']);
         Route::post('/logout', ['App\Http\Controllers\AdminController', 'logout']);
-        Route::get('/getUserAverageDaily', ['App\Http\Controllers\AdminController', 'getUserAverageDaily']);
+        Route::get('/getUserAverage', ['App\Http\Controllers\AdminController', 'getUserAverageDaily']);
 
     });
 });

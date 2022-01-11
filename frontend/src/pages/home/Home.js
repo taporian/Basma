@@ -10,8 +10,10 @@ import Subscribe from '../../components/subscribe/Subscribe'
 import PowerfulTool from '../../powerfulTool/PowerfulTool'
 import Share from '../../share/Share'
 
+
 import './home.css'
 export default function Home() {
+    
     return (
         <>
         <Clip/>
@@ -24,6 +26,7 @@ export default function Home() {
         <Store/>
         <Subscribe/>
         <ContactUs/>
+      
 
     
     

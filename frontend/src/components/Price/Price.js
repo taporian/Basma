@@ -1,5 +1,5 @@
 import React from 'react'
-import {ChallengeContainer,ChallengeTextContainer,ChallengeTitle,Line,Paragraph,DataContainer, DataIcon,DataTitle,CodeContainer} from '../codeChallenge/CodeChallenge.styled'
+import {ChallengeContainer,ChallengeTextContainer,ChallengeTitle,Line,Paragraph} from '../codeChallenge/CodeChallenge.styled'
 import './price.css';
 import PriceCard from './PriceCard';
 import { basicData,proData } from '../../data/price';

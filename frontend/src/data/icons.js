@@ -34,7 +34,7 @@ export const iconData  = [
         
     },
     {
-        icon:<img src={cogs} style={{' -webkit-transform': 'scaleX(-1)' ,'transform': 'scaleX(-1)'}} alt="cogs"/>, 
+        icon:<img src={cogs} style={{'WebkitTransform': 'scaleX(-1)' ,'transform': 'scaleX(-1)'}} alt="cogs"/>, 
         title:'Powerful Settings',
         description:description,
         

@@ -44,6 +44,22 @@
 .contact-form-container {
   flex: 50%;
 }
+.wrapper {
+  position: relative;
+
+  margin: auto;
+}
+.send-message-icon {
+  color: white;
+
+  font-size: 1.1rem;
+  position: absolute;
+  bottom: 0;
+  left: 35%;
+  top: 50%;
+
+  z-index: 2;
+}
 
 @media only screen and (max-width: 768px) {
   .contactContainer {
@@ -53,5 +69,10 @@
     flex: 80%;
     inline-size: 1rem;
     overflow-wrap: break-word;
+  }
+  .send-message-icon {
+    left: 20%;
+    top: 10%;
+    margin: auto;
   }
 }

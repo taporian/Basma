@@ -1,6 +1,6 @@
 import React from 'react'
-import news from '../../assets/images/newsletter-background.png'
-import { Row,Col25,InputFormTxt,LabelForm,InputFormSub } from "../../components/form/Form.styled";
+
+import { Row,Col25,InputFormTxt,InputFormSub } from "../../components/form/Form.styled";
 import { ChallengeContainer, ChallengeTextContainer, ChallengeTitle, Paragraph } from '../codeChallenge/CodeChallenge.styled';
 import './subscribe.css'
 export default function Subscribe() {
@@ -27,7 +27,7 @@ export default function Subscribe() {
        <form className='subscribe-form' >
   <Row>
       <Col25>
-        <InputFormTxt />                
+        <InputFormTxt placeholder='Enter your email' textAlignPlaceHolder='center' />                
       </Col25>
     </Row>
   

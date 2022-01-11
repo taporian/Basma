@@ -1,9 +1,9 @@
 import React from 'react'
 import { contactData } from '../../data/contact'
-import { ConatinerTool, ImgContainerTool, ImgTool, ShareTitle, ToolData, ToolsContainer } from '../../powerfulTool/PowerfulTool.styled'
-import { BannerButton } from '../banner/Banner.styled'
+import { ConatinerTool, ToolData, ToolsContainer } from '../../powerfulTool/PowerfulTool.styled'
+import {FaPaperPlane} from 'react-icons/fa'
 import { ChallengeContainer, ChallengeTextContainer, ChallengeTitle, Line, Paragraph } from '../codeChallenge/CodeChallenge.styled';
-import { Col25, ErrorPForm, InputFormSub, InputFormTxt, LabelForm, Row, TextareaForm } from '../form/Form.styled';
+import { Col25,  InputFormSub, InputFormTxt,  Row, TextareaForm } from '../form/Form.styled';
 import './contact.css';
 
 export default function ContactUs() {
@@ -30,7 +30,7 @@ export default function ContactUs() {
         <ToolsContainer widthMedia='100%'>
             <ConatinerTool flexMedia='50%'  flex='35%' >
            
-            <ToolData style={{'margin-bottom':'8rem','width':'100%'}}>
+            <ToolData style={{'marginBottom':'8rem','width':'100%'}}>
             <Paragraph width='100%' flex='20%' textAlign="start" >          
             Contrary to popular belief, Lorem Ipsum is not simply random text. 
             It has roots in a piece of 
@@ -63,27 +63,27 @@ export default function ContactUs() {
   <Row marginMedia='auto' margin='1rem'>
     
       <Col25>
-        <InputFormTxt/>
+        <InputFormTxt placeholder='Name'/>
       
       </Col25>
     </Row>
     <Row marginMedia='auto' margin='1rem'>
     
       <Col25>
-        <InputFormTxt />
+        <InputFormTxt placeholder='Email' />
     
       </Col25>
     </Row>
     <Row marginMedia='auto' margin='1rem'>
      
       <Col25>
-        <InputFormTxt />
+        <InputFormTxt placeholder='Subject' />
        
       </Col25>
     </Row>
     <Row marginMedia='auto' margin='1rem'>
       <Col25>
-        <TextareaForm  ></TextareaForm>
+        <TextareaForm placeholder=''   ></TextareaForm>
 
         
       </Col25>
@@ -91,11 +91,13 @@ export default function ContactUs() {
     <Col25>
     
     <Row  marginMedia='auto'  margin='1rem'>
+    <div className='wrapper'>
       <InputFormSub  type='submit' value='Send Message'/>
+      <FaPaperPlane className='send-message-icon'/>
+      </div>
     </Row>
     </Col25>
   </form>
-
         </ToolsContainer>
         </div>
         </>

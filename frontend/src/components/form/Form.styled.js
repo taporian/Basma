@@ -10,7 +10,12 @@ width: 100%;
   border: 1px solid #ccc;
   border-radius: 4px;
   resize: vertical;
+  
   box-shadow: -1px 1px 2px 1px rgba(143, 136, 136, 0.3);
+
+  &::placeholder{
+    text-align:${(props)=>props.textAlignPlaceHolder}; 
+  }
 
 `
 export const InputFormSub = styled.input`
@@ -20,12 +25,17 @@ background-color: #7c4fe0;
   border: none;
   border-radius: 4px;
   width:100%;
+  font-weight:bold;
+ 
+  
   margin:${(props)=>props.margin}; 
   width:${(props)=>props.width}; 
  
   cursor: pointer;
  
   margin-top:1rem;
+
+  
   @media  (max-width: 768px) {
     width: 100%;
         margin: auto;
@@ -40,10 +50,11 @@ export const TextareaForm = styled.textarea`
 font-size:20px;
 color:black;
 width: 100%;
-  padding: 40px;
+  padding:  10px  40px 40px 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
   resize: vertical;
+  box-shadow: -1px 1px 2px 1px rgba(143, 136, 136, 0.3);
 `
 export const ErrorPForm = styled.p `
         color:red;

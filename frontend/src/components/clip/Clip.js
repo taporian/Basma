@@ -17,7 +17,7 @@ const {width}= useWindowDimensions();
 					height="90vh"
 					showLabel={true}
 					backgroundColor="#5812ed"
-					formula="polygon(45.2% 0, 100% 0, 100% 45%, 77% 80%)"
+					formula="polygon(38.2% 0, 100% 0, 100% 45%, 77% 80%)"
 				/>:
                 <Shape       
                 width="100%"
